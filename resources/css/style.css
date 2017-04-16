@@ -2,7 +2,6 @@ body {
   background-color: #F8F8FF;
   font-family: "Catamaran", sans-serif;
   color: #474747;
-
 }
 
 .container {
@@ -10,6 +9,11 @@ body {
   display: flex;
 }
 
+.icons {
+  display: none;
+}
+
+/** Header Section **/
 .toolbar {
   position: fixed;
   background-color: #FFFFFF;
@@ -23,13 +27,13 @@ header {
   justify-content: center;
   height: 64px;
   font-family: "Catamaran", sans-serif;
-
 }
 
 header .container {
   justify-content: space-between;
   height: 64px;
   position: fixed;
+  max-width: 100%;
 }
 
 header h1 {
@@ -41,6 +45,11 @@ header h1 {
 header strong {
   font-weight: bold;
   color: #474747;
+}
+
+header .logolink {
+  display: flex;
+  text-decoration: none;
 }
 
 .logo {
@@ -66,16 +75,37 @@ nav a {
   color: #696969;
 }
 
+@media only screen and (max-width: 640px) {
+  nav li {
+    display: none;
+  }
+  .icons {
+    display: block;
+  }
+  .icons img {
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  header h1 {
+    display: none;
+  }
+}
+
+/** Jumbotron Section **/
 .jumbotron {
   display: flex;
   justify-content: center;
   background-color: #DCDCDC;
 }
 
-.jumbotron .container {
+.jumbotron img {
+  width: 100%;
 }
 
-.jumbotron img {
+.jumbotron .image-container {
   width: 60%;
   min-width: 60%;
   margin: 32px 40px 32px 24px;
@@ -118,6 +148,59 @@ nav a {
   font-size: 1.3rem;
 }
 
+.signup a {
+  display: block;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 1080px) {
+  .jumbotron h2 {
+    font-size: 1.8rem;
+    margin: 20px 0;
+  }
+  .jumbotron p {
+    margin-bottom: 20px;
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 790px) {
+  .jumbotron .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .jumbotron .image-container {
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    height: 180px;
+  }
+
+  .jumbotron h2 {
+    margin: 0;
+  }
+
+  .jumbotron img {
+  }
+
+  .signup {
+    margin: 0;
+    width: 100%;
+  }
+
+  .signup-container {
+    margin: 32px 16px;
+  }
+
+  .jumbotron p {
+    margin-top: 20px;
+  }
+
+}
+
+
+/** Information Section **/
 .info {
   display: flex;
   justify-content: center;
@@ -160,9 +243,10 @@ nav a {
   font-weight: 600;
 }
 
-.feature-side img {
+.feature-side .image-container {
   width: 35%;
   min-width: 35%;
+  max-width: 35%;
 }
 
 .side-item {
@@ -200,6 +284,64 @@ nav a {
   color: #8c6699;
 }
 
+@media only screen and (max-width: 1080px) {
+  .feature-main h3 {
+    font-size: 1.6rem;
+    margin-top: 24px;
+    margin-bottom: 20px;
+  }
+
+  .feature-main p {
+    line-height: 1.4;
+    font-size: 1rem;
+  }
+
+  .feature-main h6 {
+    margin-top: 24px;
+    margin-bottom: 24px;
+    font-size: 0.7rem;
+  }
+}
+
+.mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 673px) {
+  .feature-main {
+    display: none;
+  }
+
+  .side-item {
+    flex-direction: column;
+  }
+
+  .feature-side {
+    width: 100%;
+    min-width: 100%;
+    margin-top: 0px;
+
+  }
+
+  .side-item .image-container {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+  }
+
+  .feature-side img {
+    display: none;
+  }
+
+  .feature-side .mobile {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+}
+
+/** Course Topics Section **/
 .learn {
   display: flex;
   justify-content: center;
@@ -228,11 +370,8 @@ nav a {
 
 .topic {
   width: 300px;
-  min-width: 300px;
-  max-width: 300px;
   margin: 8px 16px;
-  background-color: rgba(255, 255, 255, 1);
-
+  background-color: #FFFFFF;
 }
 
 .topic img {
@@ -270,6 +409,68 @@ nav a {
   width: 100%;
 }
 
+@media only screen and (max-width: 1080px) {
+  .learn h3 {
+    padding-top: 24px;
+    padding-bottom: 20px;
+    font-size: 1.8rem;
+  }
+  .topic h4 {
+    font-size: 1.3rem;
+  }
+
+  .topic h5 {
+    font-size: 0.9rem;
+  }
+
+  .topic p {
+    font-size: 0.9rem;
+  }
+
+}
+
+@media only screen and (max-width: 673px) {
+
+  .learn {
+    background-color: #F8F8FF;
+  }
+
+  .topics img {
+    display: none;
+  }
+
+  .course-info {
+    padding-top: 16px;
+    padding-left: 16px;
+    padding-bottom: 16px;
+    padding-right: 0;
+  }
+
+  .topic h5 {
+    display: none;
+  }
+
+  .topic p {
+    display: none;
+  }
+
+  .topic {
+    width: 100%;
+    margin: 0px 16px 8px 16px;
+    background-color: #DCDCDC;
+  }
+
+  .topics {
+  }
+
+  .topic h4 {
+    font-size: 1.7rem;
+    font-weight: 600;
+    margin-bottom: 0;
+  }
+}
+
+/** Exhibit Section **/
 .exhibit {
   display: flex;
   justify-content: center;
@@ -302,8 +503,86 @@ nav a {
 
 .exhibit-content .side-item {
   border: 0;
+
 }
 
+.exhibit .side-item img {
+  width: 100%;
+}
+
+.exhibit .image-info {
+}
+
+.exhibit .image-container {
+
+}
+.exhibit .feature-side a {
+  text-decoration: none;
+  display: block;
+  color: #474747;
+}
+
+@media only screen and (max-width: 1080px) {
+  .exhibit h3 {
+    font-size: 1.8rem;
+    font-weight: 800;
+  }
+
+  .exhibit {
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+
+
+}
+
+@media only screen and (max-width: 790px) {
+
+  .exhibit .image-container {
+    display: none;
+  }
+
+  .exhibit .feature-side {
+    width: 40%;
+    min-width: 40%;
+  }
+
+  .exhibit .side-item {
+    height: 100px;
+  }
+
+
+
+}
+
+@media only screen and (max-width: 673px) {
+  .exhibit .feature-main {
+    display: block;
+    padding: 24px 0 0 0;
+ }
+
+  .exhibit .feature-main h3 {
+    display: none;
+  }
+
+  .exhibit .feature-main p {
+    display: none;
+  }
+
+
+  .exhibit .feature-side {
+    display: none;
+  }
+
+  .exhibit {
+    border-top: 1px solid #e8e9ea;
+    padding-top: 24px;
+  }
+}
+
+/** Footer Section **/
 footer {
   display: flex;
   justify-content: center;
@@ -328,4 +607,13 @@ footer h6 {
   text-decoration: none;
   margin-right: 16px;
   color: #474747;
+}
+
+@media only screen and (max-width: 673px) {
+  .misc {
+    display: none;
+  }
+  footer .container {
+    padding-bottom: 16px;
+  }
 }
