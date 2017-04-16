@@ -13,84 +13,86 @@
 
     <!-- Place holder toolbar -->
     <!-- Instead of creating a 64px top spacing for each section to create a fixed header, takes the place of the adjustments -->
-    <div class="toolbar">
+    <div class="toolbar" role="presentation">
     </div>
 
+    <!-- ============== -->
     <!-- Header Section -->
+    <!-- ============== -->
     <header>
       <!-- Container to keep everything within a specified width in css file -->
-      <div class="container">
+      <div class="container" role="presentation">
 
-        <!-- Logo with Name -->
-        <a href="#" class="logolink">
+        <!-- Logo with Name as a link so user can click to go back home-->
+        <a href="#" class="logolink" role="presentation">
           <div class="logo">
-              <img src="./resources/images/ic-logo.svg" alt="academny logo">
-              <h1><strong>Colmar</strong>Academy</h1>
+            <img src="./resources/images/ic-logo.svg" alt="colmar academy logo">
+            <h1><strong>Colmar</strong>Academy</h1>
           </div>
         </a>
 
         <!-- Navigation Bar -->
         <nav>
-          <ul>
+          <ul role="presentation">
             <li><a href="#">On campus</a></li>
             <li><a href="#">Online</a></li>
             <li><a href="#">For companies</a></li>
             <li><a href="#">Sign in</a></li>
           </ul>
+          <!-- icons that stay hidden with css until the screen size is small enough -->
           <div class="icons">
             <a href="#"><img src="./resources/images/ic-on-campus.svg" alt="on campus logo"></a>
             <a href="#"><img src="./resources/images/ic-online.svg" alt="on campus logo"></a>
             <a href="#"><img src="./resources/images/ic-login.svg" alt="on campus logo"></a>
           </div>
         </nav>
-
       </div>
-
     </header>
 
+    <!-- ================= -->
+    <!-- Jumbotron Section -->
+    <!-- ================= -->
     <div class="jumbotron">
-      <div class="container">
-        <div class="image-container">
-          <img src="./resources/images/banner.jpg" alt="banner photo of students working">
+      <div class="container" role="presentation">
+        <!-- Image of Jumbotron -->
+        <div class="image-container" role="presentation">
+          <img src="./resources/images/banner.jpg" alt="banner photo of students studying">
         </div>
+        <!-- Signup Section of the Jumbotron -->
         <div class="signup">
-          <div class="signup-container">
-
+          <div class="signup-container" role="presentation">
             <h2>Learn something new everyday</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-
+            <p role="note">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             <a href="#">
-
-            <div class="button">
-              <h5>Start here</h5>
-            </div>
-
+              <div class="button">
+                <h5>Start here</h5>
+              </div>
             </a>
-
           </div>
         </div>
       </div>
-
     </div>
 
+    <!-- ============ -->
+    <!-- Info Section -->
+    <!-- ============ -->
     <div class="info">
-      <div class="container">
+      <div class="container" role="presentation">
+        <!-- Main Section of the information section -->
         <div class="feature-main">
-            <img src="./resources/images/information-main.jpg" alt="practice">
+          <img src="./resources/images/information-main.jpg" alt="a man reading">
           <h3>It doesn't hurt to keep practicing</h3>
-          <p>&quot;Curabitur vitae libero in ipsum porttitor consequat. Aliquam et commodo lectus, nec consequat neque. Sed non accumsam urna. Phasellus sed consequat ex. Etiam eget magna laoreet, efficitur dolor consequat, tristique ligula.&quot;</p>
-          <h6>Emanuel, Sr Strategist at Hiring.com</h6>
+          <p role="note">&quot;Curabitur vitae libero in ipsum porttitor consequat. Aliquam et commodo lectus, nec consequat neque. Sed non accumsam urna. Phasellus sed consequat ex. Etiam eget magna laoreet, efficitur dolor consequat, tristique ligula.&quot;</p>
+          <h6 aria-label="quote said by">Emanuel, Sr Strategist at Hiring.com</h6>
         </div>
+        <!-- The side sections -->
         <div class="feature-side">
 
           <div class="side-item" id="orientation">
-            <div class="image-container">
-
+            <div class="image-container" role="presentation">
               <img src="./resources/images/information-orientation.jpg" alt="orientation">
               <img src="./resources/images/information-orientation-mobile.jpg" alt="orientation" class="mobile">
-
             </div>
-
 
             <div class="image-info">
               <h4>Orientation date</h4>
@@ -100,12 +102,11 @@
           </div>
 
           <div class="side-item" id="campus">
-            <div class="image-container">
-
+            <div class="image-container" role="presentation">
               <img src="./resources/images/information-campus.jpg" alt="campus">
               <img src="./resources/images/information-campus-mobile.jpg" alt="campus" class="mobile">
-
             </div>
+
             <div class="image-info">
               <h4>Our Campus</h4>
               <p>Find which campus is close by you</p>
@@ -114,12 +115,11 @@
           </div>
 
           <div class="side-item" id="lecture">
-            <div class="image-container">
-
+            <div class="image-container" role="presentation">
               <img src="./resources/images/information-guest-lecture.jpg" alt="lecture">
               <img src="./resources/images/information-guest-lecture-mobile.jpg" alt="lecture" class="mobile">
-
             </div>
+
             <div class="image-info">
               <h4>Our guest lecture</h4>
               <p>Join a keynote with Oliver Sack about music in medical treatment</p>
@@ -131,9 +131,11 @@
 
     </div>
 
-    <div class="learn">
-      <div class="container">
-
+    <!-- ==================== -->
+    <!-- Course Topic Section -->
+    <!-- ==================== -->
+    <div class="learn" aria-label="courses available section">
+      <div class="container" role="presentation">
         <h3>Start learning</h3>
         <div class="topics">
           <div class="topic" id="software">
@@ -141,7 +143,7 @@
             <div class="course-info">
               <h4>Software engineering</h4>
               <h5>Courses</h5>
-              <p>Web Development, Mobile Development, iOT, APIs</p>
+              <p aria-label="example of courses">Web Development, Mobile Development, iOT, APIs</p>
             </div>
           </div>
           <div class="topic" id="art">
@@ -149,7 +151,7 @@
             <div class="course-info">
               <h4>Computer art</h4>
               <h5>Courses</h5>
-              <p>Imaging &amp; Design, Web Design, Motion Graphics &amp; Visual Effects, Computer Animation</p>
+              <p aria-label="example of courses">Imaging &amp; Design, Web Design, Motion Graphics &amp; Visual Effects, Computer Animation</p>
             </div>
           </div>
           <div class="topic" id="design">
@@ -157,7 +159,7 @@
             <div class="course-info">
               <h4>Design</h4>
               <h5>Courses</h5>
-              <p>User Experience Design, User Research, Visual Design</p>
+              <p aria-label="example of courses">User Experience Design, User Research, Visual Design</p>
             </div>
           </div>
           <div class="topic" id="data">
@@ -165,7 +167,7 @@
             <div class="course-info">
               <h4>Data</h4>
               <h5>Courses</h5>
-              <p>Data Science, Big Data, SQL, Data Visualization</p>
+              <p aria-label="example of courses">Data Science, Big Data, SQL, Data Visualization</p>
             </div>
           </div>
           <div class="topic" id="business">
@@ -173,7 +175,7 @@
             <div class="course-info">
               <h4>Business</h4>
               <h5>Courses</h5>
-              <p>Product Development, Business Development, Startup</p>
+              <p aria-label="example of courses">Product Development, Business Development, Startup</p>
             </div>
           </div>
           <div class="topic" id="marketing">
@@ -181,53 +183,50 @@
             <div class="course-info">
               <h4>Marketing</h4>
               <h5>Courses</h5>
-              <p>Analytics, Content Marketing, Mobile Marketing</p>
+              <p aria-label="example of courses">Analytics, Content Marketing, Mobile Marketing</p>
             </div>
           </div>
         </div>
       </div>
     </div>
 
+    <!-- =============== -->
+    <!-- Exhibit Section -->
+    <!-- =============== -->
     <div class="exhibit">
-      <div class="container">
-
+      <div class="container" role="presentation">
         <h3>Thesis exhibit</h3>
-        <div class="exhibit-content">
-
+        <div class="exhibit-content" role="presentation">
+          <!-- Main Section of the Exhibit -->
           <div class="feature-main">
             <video src="./resources/videos/thesis.mp4" controls>
             </video>
             <h3>Reimagine urban</h3>
-            <p>&quot;Curabitur vitae libero in ipsum porttitor consequat. Aliquam et commodo lectus, nec consequat neque. Sed non accumsam urna. Phasellus sed consequat ex. Etiam eget magna laoreet, efficitur dolor consequat, tristique ligula.&quot;</p>
+            <p role="note">&quot;Curabitur vitae libero in ipsum porttitor consequat. Aliquam et commodo lectus, nec consequat neque. Sed non accumsam urna. Phasellus sed consequat ex. Etiam eget magna laoreet, efficitur dolor consequat, tristique ligula.&quot;</p>
           </div>
-
+          <!-- Side Section of the Exhibit -->
           <div class="feature-side">
+
             <a href="#">
-
-            <div class="side-item">
-              <div class="image-container">
-
-                <img src="./resources/images/thesis-fisma.jpg" alt="campus">
-
+              <div class="side-item">
+                <div class="image-container" role="presentation">
+                  <img src="./resources/images/thesis-fisma.jpg" alt="campus">
+                </div>
+                <div class="image-info">
+                  <h4>Fisma: Design and</h4>
+                  <p role="note">Designer showcase of new prototype product</p>
+                </div>
               </div>
-              <div class="image-info">
-                <h4>Fisma: Design and</h4>
-                <p>Designer showcase of new prototype product</p>
-              </div>
-            </div>
-
             </a>
 
             <a href="#">
               <div class="side-item">
-                <div class="image-container">
-
+                <div class="image-container" role="presentation">
                   <img src="./resources/images/thesis-now-and-then.jpg" alt="campus">
-
                 </div>
                 <div class="image-info">
-                <h4>Now and then</h4>
-                <p>Research study about New York</p>
+                  <h4>Now and then</h4>
+                  <p>Research study about New York</p>
                 </div>
               </div>
             </a>
@@ -236,16 +235,17 @@
       </div>
     </div>
 
+    <!-- ============== -->
+    <!-- Footer Section -->
+    <!-- ============== -->
     <footer>
-      <div class="container">
+      <div class="container" role="presentation">
         <h6>&copy; Colmar Academy. All rights reserved</h6>
-
         <div class="misc">
           <a href="#">Terms</a>
           <a href="#">Privacy</a>
         </div>
       </div>
     </footer>
-
   </body>
 </html>
